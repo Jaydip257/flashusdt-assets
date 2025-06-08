@@ -1,0 +1,8 @@
+{
+  "name": "Flash USDT",
+  "symbol": "USDT",
+  "decimals": 6,
+  "address": "0x8F62f033C1B9e4d9F99Bd2f7595CF102Baa24901",
+  "chainId": 11155111,
+  "logoURI": "https://raw.githubusercontent.com/Jaydip257/flashusdt-assets/main/blockchains/ethereum/assets/0x8F62f033C1B9e4d9F99Bd2f7595CF102Baa24901/logo.png"
+}
