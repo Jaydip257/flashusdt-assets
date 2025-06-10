@@ -1,0 +1,23 @@
+{
+  "name": "FlashUSDT Token List",
+  "timestamp": "2025-06-10T12:00:00+05:30",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tokens": [
+    {
+      "chainId": 97,
+      "address": "0xE1ED28c009eab1997f6762a23Ef3D0Ba31D55e5d",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 6,
+      "logoURI": "https://yourdomain.com/assets/bsc/0xE1ED28c009eab1997f6762a23Ef3D0Ba31D55e5d/logo.png",
+      "extensions": {
+        "coingeckoId": "tether",
+        "priceUSD": "1.00"
+      }
+    }
+  ]
+}
