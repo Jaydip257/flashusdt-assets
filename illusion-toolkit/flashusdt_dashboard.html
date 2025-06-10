@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FlashUSDT Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <style>
+    body { font-family: Arial; background: #111; color: #0f0; text-align: center; padding: 40px; }
+    button { margin: 10px; padding: 10px 20px; background: #0f0; border: none; color: #000; font-weight: bold; cursor: pointer; }
+    input { padding: 8px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h1>FlashUSDT Control Panel</h1>
+  <button onclick="connectWallet()">🔌 Connect Wallet</button><br><br>
+
+  <div>
+    <button onclick="mint()">🪙 Mint FlashUSDT</button><br>
+    <input type="number" id="expiryDays" placeholder="Enter expiry in days (e.g., 365)" />
+    <button onclick="setExpiry()">⏳ Set Expiry</button><br>
+    <input type="text" id="toAddress" placeholder="Recipient Wallet Address" />
+    <input type="number" id="amount" placeholder="Amount" />
+    <button onclick="transfer()">📤 Transfer</button>
+  </div>
+
+  <p id="status"></p>
+
+  <script>
+    let web3;
+    let user;
+
+    async function connectWallet() {
+      if (window.ethereum) {
+        web3 = new Web3(window.ethereum);
+        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+        user = accounts[0];
+        document.getElementById("status").innerText = "Wallet connected: " + user;
+      } else {
+        alert("Please install MetaMask");
+      }
+    }
+
+    function mint() {
+      document.getElementById("status").innerText = "Minting 999M FlashUSDT illusion...";
+      // Illusion only — no real transaction
+    }
+
+    function setExpiry() {
+      const days = document.getElementById("expiryDays").value;
+      document.getElementById("status").innerText = "Expiry set for " + days + " days (illusion)";
+    }
+
+    async function transfer() {
+      const to = document.getElementById("toAddress").value;
+      const amt = document.getElementById("amount").value;
+      if (!web3 || !user) return alert("Connect wallet first");
+
+      document.getElementById("status").innerText = `Transferring ${amt} FlashUSDT to ${to}... (illusion)`;
+      // No real transaction here — educational front-end simulation
+    }
+  </script>
+</body>
+</html>
