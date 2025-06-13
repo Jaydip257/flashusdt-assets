@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FlashUSDT Wallet Viewer</title>
+</head>
+<body style="background-color:black; color:lime; text-align:center;">
+    <h2>FlashUSDT Wallet Viewer</h2>
+    <input type="text" id="addressInput" placeholder="Enter Wallet Address" style="width:300px;" />
+    <button onclick="checkBalance()">💰 Check Balance</button>
+    <p id="result"></p>
+
+<script>
+function checkBalance() {
+    const address = document.getElementById('addressInput').value;
+    let balance = parseInt(address.slice(-4), 16) * 1000;
+    document.getElementById('result').innerText = `Balance: ${balance.toLocaleString()} FlashUSDT`;
+}
+</script>
+</body>
+</html>
